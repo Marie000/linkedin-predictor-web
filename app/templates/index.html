@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home page
+{% endblock %}
+
+{% block content %}
+
+<body class="text-center">
+    <h1>Job Description Form</h1>
+    <div class="container">
+        <form method="POST" class="form-register" style="color:white">
+
+            {{ form.hidden_tag() }}
+
+            {{ form.description.label() }}
+            {{ form.description(class="form-control form-description", placeholder="job description") }}
+
+            <br />
+            {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+        </form>
+    </div>
+</body>
+
+{% endblock %}
