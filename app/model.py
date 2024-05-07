@@ -1,9 +1,9 @@
 import torch
 import torch.nn as nn
-import torchtext
-from torchtext.data.utils import get_tokenizer
 
-tokenizer = get_tokenizer("basic_english")
+from app import torchtext_utils
+
+tokenizer = torchtext_utils.get_tokenizer("basic_english")
 
 
 class RNNModel(nn.Module):
